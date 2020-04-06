@@ -1,2 +1,4 @@
+spring:
+   profiles: index8002
 server:
    port: 8003
