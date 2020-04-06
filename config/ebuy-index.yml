@@ -1,9 +1,13 @@
+# found duplicate key spring
+# in 'reader', line 8, column 1:
+# 重复的键值 spring
+
 server:
-   port: 8002
+   port: 8000
 
 spring:
   application:
-      name: ebuy-back
+     name: ebuy-index
   datasource:
      url: jdbc:mysql://127.0.0.1/C76-S3-Ply-ebuy?serverTimezone=UTC&CharacterEncoding=UTF-8&useSSL=false
      username: root
@@ -24,3 +28,14 @@ logging:
         ebuy:
           dao: debug
           web: warn
+
+# 开启声明式熔断降级开关
+feign:
+  hystrix:
+    enabled: true
+    
+---
+spring:
+   profiles: index-8003
+server:
+   port: 8003
