@@ -25,9 +25,3 @@ logging:
           dao: debug
           web: warn
           
----
-spring:
-   application:
-      name: order8005
-server:
-    port: 8005
